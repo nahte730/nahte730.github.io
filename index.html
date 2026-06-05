@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio ZAMPIERI Ethan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <!-- En-tête -->
+    <header>
+        <h1>Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="Untitled-1.html">Accueil</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="Download_cv.html">Télécharger mon cv</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <!-- Contenu principal -->
+    <main>
+        <section class="hero">
+            <img src="photo.jpg" alt="Ethan ZAMPIERI">
+            <div class="info">
+                <h2>Ethan ZAMPIERI</h2>
+                <p>Étudiant en BUT Informatique · Futur développeur web & logiciel</p>
+            </div>
+        </section>
+ 
+        <section class="description">
+            <p>Je m'appelle Ethan ZAMPIERI, étudiant en 1ère année de BUT Informatique 
+            à l'Université Grenoble Alpes. Je me destine au développement web et logiciel, 
+            domaines dans lesquels je développe mes compétences à travers mes projets académiques.</p>
+            <p>Langages pratiqués :</p>
+            <ul>
+                <li>JAVA / JavaFX — logique applicative & interfaces</li>
+                <li>SQL — gestion de bases de données</li>
+                <li>HTML / CSS — intégration web front-end</li>
+                <li>Shell — administration système & scripts</li>
+            </ul>
+            
+            <button class="btn-diplomes" onclick="openModal('modal-diplomes')">Mes diplômes</button>
+        </section>
+ 
+        <!-- ── Projet Chatbot ── -->
+        <section>
+            <h2>Projets réalisés</h2>
+            <h3 class="projet">Chatbot</h3>
+            <div class="proj-link" onclick="openModal('modal-chatbot')" role="button" tabindex="0" aria-label="Voir détails Chatbot">
+                <div>
+                    <p class="map">Code permettant de répondre à des questions prédéfinies de culture générale.</p>
+                    <ul>
+                        <li>Réalisation en duo</li>
+                        <li>Sur une période de 5 homme·jours</li>
+                        <li>Langage : JAVA</li>
+                    </ul>
+                    <span class="more">plus de détails</span>
+                </div>
+                <img src="chatbotRep.png" alt="Chatbot" height="150px" width="200px">
+            </div>
+        </section>
+ 
+        <!-- ── Projet Orange ── -->
+        <section>
+            <h3 class="projet">Site factice de Orange Business</h3>
+            <div class="proj-link" onclick="openModal('modal-orange')" role="button" tabindex="0" aria-label="Voir détails Orange">
+                <img src="Orange.png" alt="Orange" height="100px" width="150px">
+                <div>
+                    <p>Site fait en équipe afin de changer le style pour s'accommoder aux goûts des 3ème pour des stages.</p>
+                    <ul>
+                        <li>Réalisation en équipe de 4 personnes</li>
+                        <li>Sur une période ≈ 64 homme·heures</li>
+                        <li>Langage : HTML / CSS / JS</li>
+                    </ul>
+                    <span class="more">plus de détails</span>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- ── Projet VM ── -->
+        <section>
+            <h3 class="projet">Installation d'une machine virtuelle</h3>
+            <div class="proj-link" onclick="openModal('modal-vm')" role="button" tabindex="0" aria-label="Voir détails VM">
+                <div class="P3_desc">
+                    <p>Mise en place et confection d'un guide d'installation d'une machine virtuelle.</p>
+                    <ul>
+                        <li>Réalisation en solitaire</li>
+                        <li>Sur une période de 3 homme·heures</li>
+                        <li>Langage : Shell</li>
+                    </ul>
+                    <span class="more">plus de détails</span>
+                </div>
+                <img src="screen7.png" alt="VM" height="100px" width="150px">
+            </div>
+        </section>
+ 
+        <!-- ── Projet BDD ── -->
+        <section>
+            <h3 class="projet">Gestion d'une base de données</h3>
+            <div class="proj-link" onclick="openModal('modal-bdd')" role="button" tabindex="0" aria-label="Voir détails BDD">
+                <img src="BD.webp" alt="Base de données" height="100px" width="150px">
+                <div>
+                    <p>Création et gestion de base de données d'agence de bateaux à voile.</p>
+                    <ul>
+                        <li>Réalisation en duo</li>
+                        <li>Sur une période ≈ 10 homme·heures</li>
+                        <li>Langage : SQL (dBeaver)</li>
+                    </ul>
+                    <span class="more">plus de détails</span>
+                </div>
+            </div>
+        </section>
+    </main>
+ 
+    <!-- Pied de page -->
+    <footer>
+        <div id="contact">
+            <h2>Autres pages :</h2>
+            <ul>
+                <li><a href="#top">Home page</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="Download_cv.html">Mon CV</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2>Moyen de contact :</h2>
+            <p>Mail personnel : nahte73300@gmail.com</p>
+            <p>Mail universitaire : ethan.zampieri@etu.univ-grenoble-alpes.fr</p>
+            <p>Git : <a href="https://github.com/nahte730" target="_blank">github.com/nahte730</a></p>
+        </div>
+    </footer>
+ 
+ 
+    <!-- ════════════════════════════════════════════
+         MODALES
+    ═══════════════════════════════════════════════ -->
+
+
+    <div class="modal-overlay" id="modal-diplomes" onclick="closeOnOverlay(event, 'modal-diplomes')">
+        <div class="modal" role="dialog" aria-label="Diplômes">
+            <button class="modal-close" onclick="closeModal('modal-diplomes')" aria-label="Fermer">✕</button>
+            <h2>Diplômes obtenus</h2>
+            <div class="modal-body">
+                <div class="modal-cols">
+                    <div class="modal-info-col">
+                        <div class="section-label">Brevet des collèges</div>
+                        <p>Obtenu avec mention <strong>Général</strong></p>
+                        <span class="tag">Collège</span>
+                    </div>
+                    <div class="modal-info-col">
+                        <div class="section-label">Baccalauréat STI2D</div>
+                        <p>Obtenu avec mention assez bien</p>
+                        <span class="tag">Lycée</span>
+                        <span class="tag">Sciences & Technologies</span>
+                        <span class="tag">Ingénierie & Développement Durable</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modale Chatbot -->
+    <div class="modal-overlay" id="modal-chatbot" onclick="closeOnOverlay(event, 'modal-chatbot')">
+        <div class="modal" role="dialog" aria-label="Détails Chatbot">
+            <button class="modal-close" onclick="closeModal('modal-chatbot')" aria-label="Fermer">✕</button>
+            <h2>Chatbot</h2>
+            <div class="modal-body">
+                <img src="chatbotRep.png" alt="Chatbot">
+                <div class="modal-cols">
+                    <div>
+                        <p>Programme permettant de répondre à des questions de culture générale en analysant les mots-clés pour trouver la réponse la plus pertinente dans un fichier texte.</p>
+                        <div class="section-label">Stack</div>
+                        <span class="tag">Java</span>
+                        <span class="tag">Fichiers texte</span>
+                        <span class="tag">Duo</span>
+                        <span class="tag">5 homme·jours</span>
+                    </div>
+                    <div>
+                        <div class="section-label">Compétences acquises</div>
+                        <ul>
+                            <li>Travail en équipe</li>
+                            <li>Amélioration de la logique de code</li>
+                            <li>Traitement du langage naturel (basique)</li>
+                        </ul>
+                        <div class="section-label">Ma participation</div>
+                        <ul>
+                            <li>Recherche par mots-clés de la question</li>
+                            <li>Choix de la réponse la plus « fit »</li>
+                        </ul>
+                        <div class="section-label">Objectifs</div>
+                        <ul>
+                            <li>Apprendre à manipuler des fichiers texte en Java</li>
+                            <li>Implémenter un algorithme de recherche par mots-clés</li>
+                            <li>Travailler en binôme avec un gestionnaire de version</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- Modale Orange -->
+    <div class="modal-overlay" id="modal-orange" onclick="closeOnOverlay(event, 'modal-orange')">
+        <div class="modal" role="dialog" aria-label="Détails Orange Business">
+            <button class="modal-close" onclick="closeModal('modal-orange')" aria-label="Fermer">✕</button>
+            <h2>Site Orange Business</h2>
+            <div class="modal-body">
+                <img src="Orange.png" alt="Orange">
+                <div class="modal-cols">
+                    <div>
+                        <p>Site factice d'Orange Business réalisé en équipe, avec pour objectif de revisiter le design pour le rendre attractif dans le cadre de recherches de stage de 3ème.</p>
+                        <div class="section-label">Stack</div>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Équipe ×4</span>
+                        <span class="tag">≈ 64h</span>
+                    </div>
+                    <div>
+                        <div class="section-label">Compétences acquises</div>
+                        <ul>
+                            <li>Travail en équipe (4 personnes)</li>
+                            <li>Intégration web HTML / CSS / JS</li>
+                            <li>Organisation et répartition des tâches</li>
+                        </ul>
+                        <div class="section-label">Ma participation</div>
+                        <ul>
+                            <li>Intégration de pages HTML/CSS</li>
+                            <li>Participation aux choix de design</li>
+                        </ul>
+                        <div class="section-label">Objectifs</div>
+                        <ul>
+                            <li>Comprendre les tendances des adolescents</li>
+                            <li>Adapter ces tendances aux offres et services d'Orange</li>
+                            <li>Analyser les besoins et les comportements de cette cible</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- Modale VM -->
+    <div class="modal-overlay" id="modal-vm" onclick="closeOnOverlay(event, 'modal-vm')">
+        <div class="modal" role="dialog" aria-label="Détails Machine Virtuelle">
+            <button class="modal-close" onclick="closeModal('modal-vm')" aria-label="Fermer">✕</button>
+            <h2>Installation d'une VM</h2>
+            <div class="modal-body">
+                <img src="/screen7.png" alt="VM">
+                <div class="modal-cols">
+                    <div>
+                        <p>Mise en place et rédaction d'un guide complet d'installation d'une machine virtuelle, incluant la configuration réseau et les premiers paramétrages système.</p>
+                        <div class="section-label">Stack</div>
+                        <span class="tag">Shell</span>
+                        <span class="tag">Linux</span>
+                        <span class="tag">Solo</span>
+                        <span class="tag">3h</span>
+                    </div>
+                    <div>
+                        <div class="section-label">Compétences acquises</div>
+                        <ul>
+                            <li>Administration système de base</li>
+                            <li>Scripting Shell</li>
+                            <li>Rédaction de documentation technique</li>
+                        </ul>
+                        <div class="section-label">Ma participation</div>
+                        <ul>
+                            <li>Réalisation complète en autonomie</li>
+                            <li>Écriture du guide d'installation</li>
+                            <li>Scripts Shell d'automatisation</li>
+                        </ul>
+                        <div class="section-label">Objectifs</div>
+                        <ul>
+                            <li>Comprendre la virtualisation et l'administration système</li>
+                            <li>Rédiger une documentation technique claire</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- Modale BDD -->
+    <div class="modal-overlay" id="modal-bdd" onclick="closeOnOverlay(event, 'modal-bdd')">
+        <div class="modal" role="dialog" aria-label="Détails Base de données">
+            <button class="modal-close" onclick="closeModal('modal-bdd')" aria-label="Fermer">✕</button>
+            <h2>Gestion d'une base de données</h2>
+            <div class="modal-body">
+                <img src="BD.webp" alt="Base de données">
+                <div class="modal-cols">
+                    <div>
+                        <p>Création et gestion d'une base de données pour une agence de bateaux à voile : modélisation, création des tables, requêtes et relations entre entités.</p>
+                        <div class="section-label">Stack</div>
+                        <span class="tag">SQL</span>
+                        <span class="tag">dBeaver</span>
+                        <span class="tag">Duo</span>
+                        <span class="tag">≈ 10h</span>
+                    </div>
+                    <div>
+                        <div class="section-label">Compétences acquises</div>
+                        <ul>
+                            <li>Modélisation BDD (MCD / MLD)</li>
+                            <li>Requêtes SQL avancées</li>
+                            <li>Utilisation de dBeaver</li>
+                        </ul>
+                        <div class="section-label">Ma participation</div>
+                        <ul>
+                            <li>Création des tables et contraintes</li>
+                            <li>Rédaction des requêtes métier</li>
+                        </ul>
+                        <div class="section-label">Objectifs</div>
+                        <ul>
+                            <li>Concevoir le schéma relationnel d'une base de données</li>
+                            <li>Créer et structurer les tables avec SQL (clés primaires et étrangères)</li>
+                            <li>Manipuler et administrer les données (Insert, Update, Delete)</li>
+                            <li>Optimiser les requêtes pour l'extraction de données complexes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+ 
+    <script>
+        function openModal(id) {
+            const overlay = document.getElementById(id);
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+ 
+        function closeModal(id) {
+            const overlay = document.getElementById(id);
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+ 
+        function closeOnOverlay(event, id) {
+            if (event.target === event.currentTarget) closeModal(id);
+        }
+ 
+        // Fermer avec Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay.active').forEach(el => {
+                    el.classList.remove('active');
+                });
+                document.body.style.overflow = '';
+            }
+        });
+ 
+        // Accessibilité clavier sur les cartes projet
+        document.querySelectorAll('.proj-link').forEach(el => {
+            el.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    el.click();
+                }
+            });
+        });
+    </script>
+ 
+</body>
+</html>
